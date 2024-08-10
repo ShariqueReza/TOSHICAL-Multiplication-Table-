@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Project_3</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand fs-3 tsh text-white fw-bolder" href="https://toshical.com/index">TOSHICAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  mx-auto mb-2">
+                <li class="nav-item">
+                  <a class="nav-link active fs-4 text-white ps-5 home_sty" aria-current="page" href="https://toshical.com/index">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active fs-4 text-white ps-5 about_sty" href="https://toshical.com/about-us">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active fs-4 text-white ps-5 privacy_sty " href="https://toshical.com/privacy-policy">PRIVACY POLICY</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active fs-4 text-white me-5 ps-5 contact_sty" href="https://toshical.com/contact-us">CONTACT US
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+      <p class="text-center mt-4 fs-1 fw-bolder ">Free Online Multiplication Table Generator For Kids</p>
+ 
+        <div class="d-flex flex-row justify-content-center mt-4">
+          <hr class="mx-auto border border-dark border-2 opacity-50 col-9 position-absolute mb-3">
+            <div class="zoom-in-out-box mt-2"></div>
+            <div class="zoom-in-out-box mt-2"></div>
+            <div class="zoom-in-out-box mt-2"></div>
+            <div class="zoom-in-out-box mt-2"></div>
+            <div class="zoom-in-out-box mt-2"></div>
+        </div>
+      
+     
+        
+         
+    </header>
+    <main>
+      <div class="container" >
+        <div class="card mx-auto mt-5 col-11 rounded-4 border border-1 shadow pb-4">
+          <div class="card-body">
+            <div class="card mx-auto mt-3 shadow border border-1 col-6 rounded-4">
+              <div class="card-body">
+                <p class="card-text fs-5 text-white-50"><small class="text-body-secondary">Enter a number to generate the table</small></p>
+                <input class="form-control form-control me-2 fs-5" id="tableno"  placeholder="Enter a number to generate the table" aria-label="Search" type="number" min="-100" step="1" id="amountInput" >
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary fw-semibold fs-6 mt-5 generate-button">Generate Table</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+          <div class=" show mx-auto  col-11">
+
+          </div>
+        
+            
+
+         </div>
+        </div>
+     
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script>
+      function h_function() {
+        document.getElementById("forh").style.boxShadow = "2px 1px 2px 1px blue" ;
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script>
+      const button_element=document.querySelector('.generate-button');
+      let productsHTML = `
+      <table class="table">
+              <thead>
+                  <tr class="table-primary text-white fs-3">
+                    <button type="button" class="btn btn-primary col-7 fs-3 fw-semibold rounded-0 text-start ">MULTIPLIER</button>
+                    <button type="button" class="btn btn-primary col-5 fs-3 fw-semibold rounded-0 text-start ">RESULT</button>
+                  </tr>                
+              </thead>
+              <tbody>
+
+        `;
+      button_element.addEventListener('click', () =>{
+        let n1=document.getElementById('tableno').value;
+        const show=document.querySelector('.show');
+        show.innerHTML=null;
+        for (let i=1; i<=10; i++){
+          let result=(n1 + "x" + i + "=" + n1*i) + "<br />";
+          
+          let mlt=n1 + "x" + i ;
+          let res=n1*i;
+          productsHTML +=`
+          <tr class="fs-3 fw-semibold  text-start rounded-0 table-success border border-top-0 border-primary">
+                  <td>${mlt}</td>
+                  <td>${res}</td>
+          </tr>
+          `;
+
+        };
+        productsHTML += `
+      </tbody>
+          </table>
+        `
+        show.innerHTML=show.innerHTML+productsHTML;
+
+        
+      });
+    </script>
+
+
+  </body>
+</html>

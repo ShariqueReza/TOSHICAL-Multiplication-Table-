@@ -1,0 +1,36 @@
+.zoom-in-out-box {
+  margin-left: 19px;
+  width: 20px;
+  height: 20px;
+  background:#FF69B4;
+  animation: zoom-in-zoom-out 2s ease infinite;
+  border-radius:10px;
+}
+ 
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.nav-link:hover,.navbar-brand:hover{
+  color: goldenrod !important;
+  
+}
+.tsh{
+  margin-left: 200px;
+}
+.home_sty{
+  margin-left: 230px;
+}
+.contact_sty{
+  margin-left: -20px;
+}
+.about_sty{
+  margin-left: 10px;
+}
