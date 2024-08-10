@@ -12,4 +12,6 @@ Javascript
 Bootstrap
 
 ## Screenshot
+![Screenshot 2024-08-10 130218](https://github.com/user-attachments/assets/5a31c24c-17db-4521-b2e4-5065a8adbcda)
+![Screenshot 2024-08-10 130245](https://github.com/user-attachments/assets/b0a2d29a-8dc0-48a8-83b0-57e716d85591)
 
